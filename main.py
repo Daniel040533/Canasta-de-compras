@@ -92,3 +92,18 @@ if __name__ == "__main__":
         
     print(f"Líneas finales en la factura {factura_prueba}: {lista_prueba.contar()}")
     print("-" * 50)
+    
+
+    print("--- DEMOSTRACIÓN: PROBLEMA 2 ---")
+    
+    total_factura = calcular_total_factura_enlazada(lista_prueba)
+    print(f"Importe total de la factura {factura_prueba}: £{total_factura:.2f}")
+    
+    if lista_prueba.cabeza:
+        cliente_prueba = lista_prueba.cabeza.datos['CustomerID']
+        total_cliente = calcular_acumulado_cliente_enlazada(base_de_datos, cliente_prueba)
+        print(f"Gasto total acumulado del cliente {cliente_prueba}: £{total_cliente:.2f}")
+    else:
+        print("La factura está vacía.")
+        
+    print("-" * 50)
